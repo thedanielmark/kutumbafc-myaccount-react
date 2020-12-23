@@ -95,12 +95,12 @@ $(document).ready(function () {
                   ((jOverlay = i("<div></div>")
                     .attr("id", "jpreOverlay")
                     .css({
-                      position: "fixed",
-                      top: 0,
-                      left: 0,
-                      width: "100%",
-                      height: "100%",
-                      zIndex: 9999999,
+                      // position: "fixed",
+                      // top: 0,
+                      // left: 0,
+                      // width: "100%",
+                      // height: "100%",
+                      // zIndex: 9999999,
                     })
                     .appendTo("body")),
                   a.showSplash)
@@ -126,6 +126,7 @@ $(document).ready(function () {
                 var e = i(window).width() - i(jLoader).width();
                 i(jLoader).css({
                   position: "absolute",
+                  display: "none",
                   top: a.loaderVPos,
                   left: Math.round((50 / i(window).width()) * e) + "%",
                 }),
