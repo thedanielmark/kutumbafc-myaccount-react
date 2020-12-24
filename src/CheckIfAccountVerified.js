@@ -12,12 +12,22 @@ class CheckIfAccountVerified extends React.Component {
   }
 
   componentDidMount() {
+    function getCookieValue(cookieName) {
+      var b = document.cookie.match(
+        "(^|;)\\s*" + cookieName + "\\s*=\\s*([^;]+)"
+      );
+      return b ? b.pop() : "";
+    }
+
+    var phone = getCookieValue("phone");
+    var auth_token = getCookieValue("auth_token");
+
     fetch(
       localStorage.APIRoute +
         "auth-status.php?phone=" +
-        localStorage.phone +
+        phone +
         "&auth_token=" +
-        localStorage.auth_token
+        auth_token
     )
       .then((res) => res.json())
       .then(
@@ -58,14 +68,12 @@ class CheckIfAccountVerified extends React.Component {
 
       if (data.isAuthenticated === true) {
         if (data.phoneConfirmed === true) {
-          return (
-            <Redirect to={{ pathname: "https://myaccount.kutumbafc.com/" }} />
-          );
-        } else {
           return <Component />;
+        } else {
+          <Redirect to={{ pathname: "https://accounts.kutumbafc.com/verify-account" }} />;
         }
       } else {
-        return <Redirect to={{ pathname: "/login" }} />;
+        return <Redirect to={{ pathname: "https://accounts.kutumbafc.com" }} />;
       }
     }
   }

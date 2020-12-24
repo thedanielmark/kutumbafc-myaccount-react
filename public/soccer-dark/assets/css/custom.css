@@ -1,0 +1,15 @@
+.profile-t-shirt-name {
+  position: absolute;
+  top: 90px;
+  color: #ffffffdd;
+  font-weight: 800;
+  font-size: 2.8rem;
+}
+
+.profile-t-shirt-number {
+  position: absolute;
+  top: 130px;
+  color: #ffffffdd;
+  font-weight: 800;
+  font-size: 8rem;
+}

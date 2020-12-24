@@ -159,10 +159,7 @@ export default function Layout(props) {
                   <li className="header-cart__item">
                     <figure className="header-cart__product-thumb">
                       <a href="soccer-dark/_soccer_shop-product.html">
-                        <img
-                          src="soccer-dark/assets/images/soccer/samples/_soccer_cart-sm-4.jpg"
-                          alt
-                        />
+                        <img src="soccer-dark/assets/images/soccer/samples/_soccer_cart-sm-4.jpg" />
                       </a>
                     </figure>
                     <div className="header-cart__inner">
@@ -191,10 +188,7 @@ export default function Layout(props) {
                   <li className="header-cart__item">
                     <figure className="header-cart__product-thumb">
                       <a href="soccer-dark/_soccer_shop-product.html">
-                        <img
-                          src="soccer-dark/assets/images/soccer/samples/_soccer_cart-sm-2.jpg"
-                          alt
-                        />
+                        <img src="soccer-dark/assets/images/soccer/samples/_soccer_cart-sm-2.jpg" />
                       </a>
                     </figure>
                     <div className="header-cart__inner">
@@ -409,50 +403,32 @@ export default function Layout(props) {
               <ul className="sponsors-logos">
                 <li className="sponsors__item">
                   <a href="#" target="_blank">
-                    <img
-                      src="soccer-dark/assets/images/soccer/sponsor-visa.png"
-                      alt
-                    />
+                    <img src="soccer-dark/assets/images/soccer/sponsor-visa.png" />
                   </a>
                 </li>
                 <li className="sponsors__item">
                   <a href="#" target="_blank">
-                    <img
-                      src="soccer-dark/assets/images/soccer/sponsor-discover.png"
-                      alt
-                    />
+                    <img src="soccer-dark/assets/images/soccer/sponsor-discover.png" />
                   </a>
                 </li>
                 <li className="sponsors__item">
                   <a href="#" target="_blank">
-                    <img
-                      src="soccer-dark/assets/images/soccer/sponsor-paypal.png"
-                      alt
-                    />
+                    <img src="soccer-dark/assets/images/soccer/sponsor-paypal.png" />
                   </a>
                 </li>
                 <li className="sponsors__item">
                   <a href="#" target="_blank">
-                    <img
-                      src="soccer-dark/assets/images/soccer/sponsor-skrill.png"
-                      alt
-                    />
+                    <img src="soccer-dark/assets/images/soccer/sponsor-skrill.png" />
                   </a>
                 </li>
                 <li className="sponsors__item">
                   <a href="#" target="_blank">
-                    <img
-                      src="soccer-dark/assets/images/soccer/sponsor-westernunion.png"
-                      alt
-                    />
+                    <img src="soccer-dark/assets/images/soccer/sponsor-westernunion.png" />
                   </a>
                 </li>
                 <li className="sponsors__item">
                   <a href="#" target="_blank">
-                    <img
-                      src="soccer-dark/assets/images/soccer/sponsor-payoneer.png"
-                      alt
-                    />
+                    <img src="soccer-dark/assets/images/soccer/sponsor-payoneer.png" />
                   </a>
                 </li>
               </ul>
@@ -468,7 +444,11 @@ export default function Layout(props) {
               <div className="row">
                 <div className="col-md-4">
                   <div className="footer-copyright">
-                    <a href="index.html">Kutumba FC</a> &copy; 2020 &nbsp; | &nbsp; <a href="https://mixspace.xyz" target="top">MixSpace Internet Services</a>
+                    <a href="index.html">Kutumba FC</a> &copy; 2020 &nbsp; |
+                    &nbsp;{" "}
+                    <a href="https://mixspace.xyz" target="top">
+                      MixSpace Internet Services
+                    </a>
                   </div>
                 </div>
                 <div className="col-md-8">
