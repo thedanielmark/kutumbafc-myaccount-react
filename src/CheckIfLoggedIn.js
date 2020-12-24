@@ -69,12 +69,14 @@ class CheckIfLoggedIn extends React.Component {
         return data.phoneConfirmed ? (
           <Component />
         ) : (
-          window.location.replace(
-            "https://accounts.kutumbafc.com/verify-account"
-          )
+          // window.location.replace(
+          //   "https://accounts.kutumbafc.com/verify-account"
+          // )
+          window.location.replace("http://localhost:5001/verify-account")
         );
       } else {
-        window.location.replace("https://accounts.kutumbafc.com");
+        window.location.replace("http://localhost:5001");
+        // window.location.replace("https://accounts.kutumbafc.com");
       }
     }
   }
