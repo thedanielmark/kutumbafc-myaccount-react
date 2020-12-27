@@ -70,7 +70,9 @@ class CheckIfAccountVerified extends React.Component {
         if (data.phoneConfirmed === true) {
           return <Component />;
         } else {
-          <Redirect to={{ pathname: "http://localhost:5001/verify-account" }} />;
+          <Redirect
+            to={{ pathname: "http://localhost:5001/verify-account" }}
+          />;
           // <Redirect to={{ pathname: "https://accounts.kutumbafc.com/verify-account" }} />;
         }
       } else {
