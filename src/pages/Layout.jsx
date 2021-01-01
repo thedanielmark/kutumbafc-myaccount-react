@@ -129,7 +129,6 @@ export default function Layout(props) {
                       <a href="soccer-dark/_soccer_shop-product.html">
                         <img
                           src="soccer-dark/assets/images/soccer/samples/_soccer_cart-sm-1.jpg"
-                          alt
                         />
                       </a>
                     </figure>
@@ -271,28 +270,28 @@ export default function Layout(props) {
                     <span className="main-nav__toggle" />
                     <a href="_soccer_shop-grid.html">Shop</a>
                     <ul className="main-nav__sub">
-                      <li className>
+                      <li>
                         <a href="_soccer_shop-grid.html">Shop - Grid</a>
                       </li>
-                      <li className>
+                      <li>
                         <a href="_soccer_shop-list.html">Shop - List</a>
                       </li>
-                      <li className>
+                      <li>
                         <a href="_soccer_shop-product.html">Single Product</a>
                       </li>
-                      <li className>
+                      <li>
                         <a href="_soccer_shop-cart.html">Shopping Cart</a>
                       </li>
-                      <li className>
+                      <li>
                         <a href="_soccer_shop-checkout.html">Checkout</a>
                       </li>
-                      <li className>
+                      <li>
                         <a href="_soccer_shop-wishlist.html">Wishlist</a>
                       </li>
-                      <li className>
+                      <li>
                         <a href="_soccer_shop-login.html">Login</a>
                       </li>
-                      <li className>
+                      <li>
                         <a href="_soccer_shop-account.html">Account</a>
                       </li>
                     </ul>
@@ -377,7 +376,7 @@ export default function Layout(props) {
                         className="footer-logo__img"
                       />
                       <div className="footer-logo__heading">
-                        <h5 className="footer-logo__txt">Kutumba FC</h5>
+                        <h5 className="footer-logo__txt">KuTumba FC</h5>
                         <span className="footer-logo__tagline">
                           Elric Bros School
                         </span>
