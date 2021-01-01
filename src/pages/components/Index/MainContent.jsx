@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
-import useSWR from "swr";
+import useSWR, { mutate } from "swr";
 import axios from "axios";
 
 function MainContent() {
@@ -23,8 +23,7 @@ function MainContent() {
       phone +
       "&auth_token=" +
       auth_token,
-    fetcher,
-    { refreshInterval: 1000 }
+    fetcher
   );
 
   if (error) {
@@ -232,6 +231,13 @@ function MainContent() {
           (result) => {
             console.log(result);
             if (result.status === "success") {
+              mutate(
+                localStorage.APIRoute +
+                  "get-profile.php?phone=" +
+                  phone +
+                  "&auth_token=" +
+                  auth_token
+              );
               // Hide button text
               document
                 .getElementById("updatePersonalInfoText")
