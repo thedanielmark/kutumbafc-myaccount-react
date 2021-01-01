@@ -350,7 +350,7 @@ function MainContent() {
                 </Link>
                 <p className="text-white px-5 mt-5 font-weight-bold h5">
                   Daniel Mark is one of our most passionate fans from India. The
-                  21 year-old's My United debut came on 20 Oct 2019. Daniel's
+                  21 year-old's KuTumba FC debut came on 20 Oct 2019. Daniel's
                   favourite player is Daniel James.
                 </p>
               </div>
