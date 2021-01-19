@@ -9,7 +9,6 @@ import { CookiesProvider } from "react-cookie";
 
 // Importing auth components
 import CheckIfLoggedIn from "./CheckIfLoggedIn";
-import CheckIfAccountVerified from "./CheckIfAccountVerified";
 
 // Importing all pages
 import Index from "./pages/Index";

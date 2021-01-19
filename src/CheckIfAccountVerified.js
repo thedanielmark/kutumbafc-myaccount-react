@@ -67,17 +67,21 @@ class CheckIfAccountVerified extends React.Component {
       const Component = this.props.component;
 
       if (data.isAuthenticated === true) {
-        if (data.phoneConfirmed === true) {
-          return <Component />;
+        if (data.phone_confirmed === true) {
+          if (data.email_confirmed === true) {
+            return <Component />;
+          } else {
+            <Redirect
+              to={{ pathname: "https://accounts.kutumbafc.com/verify-email" }}
+            />;
+          }
         } else {
           <Redirect
-            to={{ pathname: "http://localhost:5001/verify-account" }}
+            to={{ pathname: "https://accounts.kutumbafc.com/verify-phone" }}
           />;
-          // <Redirect to={{ pathname: "https://accounts.kutumbafc.com/verify-account" }} />;
         }
       } else {
-        return <Redirect to={{ pathname: "http://localhost:5001/" }} />;
-        // return <Redirect to={{ pathname: "https://accounts.kutumbafc.com" }} />;
+        return <Redirect to={{ pathname: "https://accounts.kutumbafc.com" }} />;
       }
     }
   }
