@@ -1,7 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import TopBar from "./TopBar";
-import BottomNav from "./BottomNav";
 
 export default function Layout(props) {
   return (

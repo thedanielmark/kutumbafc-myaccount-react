@@ -66,22 +66,22 @@ class CheckIfAccountVerified extends React.Component {
     } else {
       const Component = this.props.component;
 
-      if (data.isAuthenticated === true) {
+      if (data.is_authenticated === true) {
         if (data.phone_confirmed === true) {
           if (data.email_confirmed === true) {
             return <Component />;
           } else {
             <Redirect
-              to={{ pathname: "https://accounts.kutumbafc.com/verify-email" }}
+              to={{ pathname: localStorage.accounts + "verify-email" }}
             />;
           }
         } else {
           <Redirect
-            to={{ pathname: "https://accounts.kutumbafc.com/verify-phone" }}
+            to={{ pathname: localStorage.accounts + "verify-phone" }}
           />;
         }
       } else {
-        return <Redirect to={{ pathname: "https://accounts.kutumbafc.com" }} />;
+        return <Redirect to={{ pathname: localStorage.accounts }} />;
       }
     }
   }
