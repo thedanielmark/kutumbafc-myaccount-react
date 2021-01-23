@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 
-class CheckIfAccountVerified extends React.Component {
+class CheckIfEmailVerified extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,7 +21,6 @@ class CheckIfAccountVerified extends React.Component {
 
     var phone = getCookieValue("phone");
     var auth_token = getCookieValue("auth_token");
-
     fetch(
       localStorage.APIRoute +
         "auth-status.php?phone=" +
@@ -69,22 +68,18 @@ class CheckIfAccountVerified extends React.Component {
       if (data.is_authenticated === true) {
         if (data.phone_confirmed === true) {
           if (data.email_confirmed === true) {
-            return <Component />;
+            return <Redirect to={{ pathname: localStorage.myaccount }} />;
           } else {
-            <Redirect
-              to={{ pathname: localStorage.accounts + "verify-email" }}
-            />;
+            return <Component />
           }
         } else {
-          <Redirect
-            to={{ pathname: localStorage.accounts + "verify-phone" }}
-          />;
+          return <Redirect to={{ pathname: localStorage.accounts + "verify-phone" }} />;
         }
       } else {
-        return <Redirect to={{ pathname: localStorage.accounts }} />;
+        return <Redirect to={{ pathname: "/" }} />;
       }
     }
   }
 }
 
-export default CheckIfAccountVerified;
+export default CheckIfEmailVerified;
